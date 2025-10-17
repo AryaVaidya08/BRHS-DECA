@@ -25,7 +25,7 @@ export default function Resources() {
               </div>
               <h2 className={styles.comingSoonTitle}>Coming Soon</h2>
               <p className={styles.comingSoonDescription}>
-                We're working hard to bring you comprehensive resources including:
+                We&apos;re working hard to bring you comprehensive resources including:
               </p>
               <ul className={styles.resourceList}>
                 <li>Study guides for all competition categories</li>

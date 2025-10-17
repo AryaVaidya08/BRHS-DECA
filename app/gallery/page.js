@@ -60,7 +60,7 @@ export default function Gallery() {
           <div className="text-center mb-4">
             <h2 className={styles.sectionTitle}>Our Events & Achievements</h2>
             <p className={styles.sectionSubtitle}>
-              A visual journey through our DECA chapter's activities
+              A visual journey through our DECA chapter&apos;s activities
             </p>
           </div>
           

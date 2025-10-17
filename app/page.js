@@ -236,7 +236,7 @@ export default function Home() {
                   </div>
                   <div className={styles.eventDetails}>
                     <h4 className={styles.eventTitle}>SCDC — State Career Development Conference</h4>
-                    <span className={styles.eventLocation}>📍 Harrah's Atlantic City</span>
+                    <span className={styles.eventLocation}>📍 Harrah&apos;s Atlantic City</span>
                   </div>
                 </div>
                 
