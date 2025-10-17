@@ -1,0 +1,239 @@
+.page {
+  min-height: 100vh;
+}
+
+/* Header Section */
+.header {
+  background: linear-gradient(135deg, #4a4a4a 0%, #333 100%);
+  color: white;
+  padding: 4rem 0;
+}
+
+.pageTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.pageSubtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Section Styles */
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Gallery Card Styles */
+.galleryCard {
+  padding: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.galleryCard:hover {
+  border-color: #d2243d;
+  box-shadow: 0 12px 30px rgba(210, 36, 61, 0.2);
+}
+
+.imageContainer {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.placeholderImage {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid #d2243d;
+}
+
+.imagePlaceholder {
+  text-align: center;
+  color: #666;
+}
+
+.placeholderIcon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.placeholderText {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.yearBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #d2243d;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cardContent {
+  padding: 1.5rem;
+}
+
+.eventTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #4a4a4a;
+  margin-bottom: 0.8rem;
+}
+
+.eventDescription {
+  color: #666;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* CTA Section */
+.ctaSection {
+  background-color: #f8f9fa;
+}
+
+.ctaCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 3rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+}
+
+.ctaDescription {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 3rem 0;
+  }
+  
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+  
+  .pageSubtitle {
+    font-size: 1.1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .imageContainer {
+    height: 200px;
+  }
+  
+  .placeholderIcon {
+    font-size: 2.5rem;
+  }
+  
+  .cardContent {
+    padding: 1.2rem;
+  }
+  
+  .eventTitle {
+    font-size: 1.2rem;
+  }
+  
+  .ctaCard {
+    padding: 2rem 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .ctaTitle {
+    font-size: 1.8rem;
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ctaButtons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+  
+  .imageContainer {
+    height: 180px;
+  }
+  
+  .placeholderIcon {
+    font-size: 2rem;
+  }
+  
+  .placeholderText {
+    font-size: 0.9rem;
+  }
+  
+  .yearBadge {
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.7rem;
+  }
+  
+  .cardContent {
+    padding: 1rem;
+  }
+  
+  .eventTitle {
+    font-size: 1.1rem;
+  }
+  
+  .eventDescription {
+    font-size: 0.9rem;
+  }
+}

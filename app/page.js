@@ -1,95 +1,392 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const [openFAQ, setOpenFAQ] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenFAQ(openFAQ === index ? null : index);
+  };
+
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+      {/* Hero Section */}
+      <section className={styles.hero}>
+        <div className="container">
+          <div className={styles.heroContent}>
+            <div className={styles.heroText}>
+              <h1 className={styles.heroTitle}>
+                Welcome to BRHS DECA </h1>
+              <p className={styles.heroSubtitle}>
+                Empowering future business leaders through competitive events, 
+                professional development, and community engagement.
+              </p>
+            </div>
+            <div className={styles.heroImages}>
+              <a href="https://hs.brrsd.org/" target="_blank">
+                <Image
+                  src="/BR_LOGO.png"
+                  alt="BRHS Logo"
+                  width={300}
+                  height={300}
+                  className={styles.heroLogo}
+                />
+              </a>
+              <a href="https://deca.org/" target="_blank">
+              <Image
+                src="/DECA_LOGO.png"
+                alt="DECA Logo"
+                width={300}
+                height={300}
+                className={styles.heroLogo}
+              />
+              </a>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* What is DECA Section */}
+      <section className={`section ${styles.whatIsDecaSection}`}>
+        <div className="container">
+          <div className="text-center mb-4">
+            <h2 className={styles.sectionTitle}>What is DECA?</h2>
+          </div>
+          <div className={styles.whatIsDecaContent}>
+            <div className={styles.decaInfo}>
+              <h3 className={styles.decaSubtitle}>DECA Inc. is a 501(c)(3) not-for-profit career and technical student organization</h3>
+              <p className={styles.decaDescription}>
+                With more than 225,000 members in all 50 United States, the District of Columbia, Canada, China, Germany, Poland, Guam, Mexico, Puerto Rico and Spain, DECA prepares emerging leaders and entrepreneurs for careers in marketing, finance, hospitality and management in high schools and colleges around the globe.
+              </p>
+            </div>
+            <div className={styles.decaImageContainer}>
+              <Image
+                src="/deca_glass_image.jpg"
+                alt="DECA Glass Awards"
+                width={1920 * 0.25}
+                height={1080 * 0.25}
+                className={styles.decaImage}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Achievements Section */}
+      <section className={`section ${styles.achievementsSection}`}>
+        <div className="container">
+          <div className="text-center mb-4">
+            <h2 className={styles.sectionTitle}>Our Achievements</h2>
+          </div>
+          
+          <div className={styles.achievementsGrid}>
+            <div className={styles.achievementCard}>  
+              <h3 className={styles.achievementTitle}><span className={styles.achievementNumber}>90+</span><br/>Members</h3>
+            </div>
+            
+            <div className={styles.achievementCard}>
+              <h3 className={styles.achievementTitle}><span className={styles.achievementNumber}>50+</span><br/>Awards</h3>
+            </div>
+            
+            <div className={styles.achievementCard}>
+              <h3 className={styles.achievementTitle}><span className={styles.achievementNumber}>4</span><br/>Students to ICDC</h3>
+            </div>
+          </div>
+
+          <div className={styles.articlesSection}>
+            <h3 className={styles.articlesTitle}>Featured Articles</h3>
+            <div className={styles.articlesList}>
+              <a href="https://brhsprowler.org/3504/community/newly-formed-deca-club-hosts-its-first-meeting/" className={styles.articleLink} target="_blank" rel="noopener noreferrer">
+                <div className={styles.articleCard}>
+                  <h4 className={styles.articleTitle}>Newly Formed DECA Club Hosts Its First Meeting</h4>
+                  <p className={styles.articleSource}>BRHS Prowler</p>
+                  <span className={styles.articleDate}>October 2024</span>
+                </div>
+              </a>
+              
+              <a href="https://brhsprowler.org/4076/community/deca-club-participated-at-districts-conference-at-kean-university/" className={styles.articleLink} target="_blank" rel="noopener noreferrer">
+                <div className={styles.articleCard}>
+                  <h4 className={styles.articleTitle}>BRHS DECA won 23 awards at Kean University Districts Conference</h4>
+                  <p className={styles.articleSource}>BRHS Prowler</p>
+                  <span className={styles.articleDate}>January 2025</span>
+                </div>
+              </a>
+              
+              <a href="https://hs.brrsd.org/o/brhs/article/2081576" className={styles.articleLink} target="_blank" rel="noopener noreferrer">
+                <div className={styles.articleCard}>
+                  <h4 className={styles.articleTitle}>BRHS DECA Achievements and State Conference Success</h4>
+                  <p className={styles.articleSource}>Bridgewater-Raritan High School</p>
+                  <span className={styles.articleDate}>March 2025</span>
+                </div>
+              </a>
+              
+              <a href="https://hs.brrsd.org/o/brhs/article/2229159" className={styles.articleLink} target="_blank" rel="noopener noreferrer">
+                <div className={styles.articleCard}>
+                  <h4 className={styles.articleTitle}>4 BRHS Students Excel At DECA ICDC</h4>
+                  <p className={styles.articleSource}>Bridgewater-Raritan High School</p>
+                  <span className={styles.articleDate}>April-May 2025</span>
+                </div>
+              </a>
+              
+              <div className={styles.moreToComeCard}>
+                <div className={styles.moreToComeText}>More Articles Coming Soon!</div>
+                <div className={styles.moreToComeSubtext}>Stay tuned for more exciting updates</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why You Should Join Section */}
+      <section className={`section ${styles.whyJoinSection}`}>
+        <div className="container">
+          <div className="text-center mb-4">
+            <h2 className={styles.sectionTitle}>Why You Should Join DECA</h2>
+          </div>
+          
+          <div className={styles.joinBenefits}>
+            <div className={styles.benefitCard}>
+              <div className={styles.benefitIcon}>💼</div>
+              <h3 className={styles.benefitTitle}>Career Preparation</h3>
+              <p className={styles.benefitDescription}>
+                Gain real-world business experience and develop skills that employers value. 
+                DECA members are 2x more likely to be employed in business-related fields.
+              </p>
+            </div>
+            
+            <div className={styles.benefitCard}>
+              <div className={styles.benefitIcon}>🎓</div>
+              <h3 className={styles.benefitTitle}>College Readiness</h3>
+              <p className={styles.benefitDescription}>
+                Build confidence, communication skills, and leadership abilities that 
+                prepare you for college and beyond.
+              </p>
+            </div>
+            
+            <div className={styles.benefitCard}>
+              <div className={styles.benefitIcon}>🤝</div>
+              <h3 className={styles.benefitTitle}>Networking</h3>
+              <p className={styles.benefitDescription}>
+                Connect with like-minded students, industry professionals, and alumni 
+                who can help guide your career path and open doors to opportunities.
+              </p>
+            </div>
+            
+            <div className={styles.benefitCard}>
+              <div className={styles.benefitIcon}>🌟</div>
+              <h3 className={styles.benefitTitle}>Personal Growth</h3>
+              <p className={styles.benefitDescription}>
+                Develop confidence, public speaking skills, and problem-solving abilities 
+                through hands-on competitions and leadership opportunities.
+              </p>
+            </div>
+            
+            <div className={styles.benefitCard}>
+              <div className={styles.benefitIcon}>🏆</div>
+              <h3 className={styles.benefitTitle}>Recognition</h3>
+              <p className={styles.benefitDescription}>
+                Compete at regional, state, and international levels. Earn awards, 
+                accolades, and recognition that enhance your college applications.
+              </p>
+            </div>
+            
+            <div className={styles.benefitCard}>
+              <div className={styles.benefitIcon}>🎯</div>
+              <h3 className={styles.benefitTitle}>Fun & Friendships</h3>
+              <p className={styles.benefitDescription}>
+                Join a supportive community of ambitious students. Participate in 
+                exciting events, conferences, and activities while making lifelong friends.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Events, Deadlines & Calendar Section */}
+      <section className={`section ${styles.eventsSection}`}>
+        <div className="container">
+          <div className="text-center mb-4">
+            <h2 className={styles.sectionTitle}>Events, Deadlines & Calendar</h2>
+          </div>
+          
+          <div className={styles.eventsContent}>
+            <div className={styles.upcomingEvents}>
+              <h3 className={styles.eventsSubtitle}>Upcoming Events</h3>
+              <div className={styles.eventList}>
+                <div className={styles.eventItem}>
+                  <div className={styles.eventDate}>
+                    <span className={styles.eventMonth}>JAN</span>
+                    <span className={styles.eventDay}>8</span>
+                  </div>
+                  <div className={styles.eventDetails}>
+                    <h4 className={styles.eventTitle}>Regional State Testing</h4>
+                    <span className={styles.eventLocation}>📍 Kean University</span>
+                  </div>
+                </div>
+                
+                <div className={styles.eventItem}>
+                  <div className={styles.eventDate}>
+                    <span className={styles.eventMonth}>MAR</span>
+                    <span className={styles.eventDay}>3-5</span>
+                  </div>
+                  <div className={styles.eventDetails}>
+                    <h4 className={styles.eventTitle}>SCDC — State Career Development Conference</h4>
+                    <span className={styles.eventLocation}>📍 Harrah's Atlantic City</span>
+                  </div>
+                </div>
+                
+                <div className={styles.eventItem}>
+                  <div className={styles.eventDate}>
+                    <span className={styles.eventMonth}>APR</span>
+                    <span className={styles.eventDay}>25-28</span>
+                  </div>
+                  <div className={styles.eventDetails}>
+                    <h4 className={styles.eventTitle}>ICDC — International Career Development Conference</h4>
+                    <span className={styles.eventLocation}>📍 Atlanta, Georgia</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className={styles.importantDeadlines}>
+              <h3 className={styles.eventsSubtitle}>Important Deadlines</h3>
+              <div className={styles.deadlineList}>
+                <div className={styles.deadlineItem}>
+                  <div className={styles.deadlineDate}>November 10th</div>
+                  <div className={styles.deadlineDescription}>Event Registration deadline for Regionals</div>
+                </div>
+                <div className={styles.deadlineItem}>
+                  <div className={styles.deadlineDate}>???</div>
+                  <div className={styles.deadlineDescription}>More Deadlines will be added soon</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className={`section ${styles.faqSection}`}>
+        <div className="container">
+          <div className="text-center mb-4">
+            <h2 className={styles.sectionTitle}>Frequently Asked Questions</h2>
+          </div>
+          
+          <div className={styles.faqContent}>
+            <div className={styles.faqItem}>
+              <button 
+                className={styles.faqQuestion}
+                onClick={() => toggleFAQ(0)}
+              >
+                <span className={styles.questionText}>What is DECA?</span>
+                <IoIosArrowDown className={`${styles.chevron} ${openFAQ === 0 ? styles.chevronOpen : ''}`} />
+              </button>
+              <div className={`${styles.faqAnswer} ${openFAQ === 0 ? styles.faqAnswerOpen : ''}`}>
+                <div className={styles.answerContent}>
+                  <p>
+                    DECA is a career and technical student organization that prepares emerging leaders and entrepreneurs 
+                    for careers in marketing, finance, hospitality and management.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div className={styles.faqItem}>
+              <button 
+                className={styles.faqQuestion}
+                onClick={() => toggleFAQ(1)}
+              >
+                <span className={styles.questionText}>Who can join DECA?</span>
+                <IoIosArrowDown className={`${styles.chevron} ${openFAQ === 1 ? styles.chevronOpen : ''}`} />
+              </button>
+              <div className={`${styles.faqAnswer} ${openFAQ === 1 ? styles.faqAnswerOpen : ''}`}>
+                <div className={styles.answerContent}>
+                  <p>
+                    Any high school student interested in business, marketing, finance, hospitality, or management 
+                    can join DECA. No prior experience is required.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div className={styles.faqItem}>
+              <button 
+                className={styles.faqQuestion}
+                onClick={() => toggleFAQ(2)}
+              >
+                <span className={styles.questionText}>What are competitive events?</span>
+                <IoIosArrowDown className={`${styles.chevron} ${openFAQ === 2 ? styles.chevronOpen : ''}`} />
+              </button>
+              <div className={`${styles.faqAnswer} ${openFAQ === 2 ? styles.faqAnswerOpen : ''}`}>
+                <div className={styles.answerContent}>
+                  <p>
+                    Competitive events are role-play scenarios, written tests, and presentations that test your 
+                    knowledge and skills in various business areas. They range from marketing to finance to hospitality.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div className={styles.faqItem}>
+              <button 
+                className={styles.faqQuestion}
+                onClick={() => toggleFAQ(3)}
+              >
+                <span className={styles.questionText}>How much does it cost to join?</span>
+                <IoIosArrowDown className={`${styles.chevron} ${openFAQ === 3 ? styles.chevronOpen : ''}`} />
+              </button>
+              <div className={`${styles.faqAnswer} ${openFAQ === 3 ? styles.faqAnswerOpen : ''}`}>
+                <div className={styles.answerContent}>
+                  <p>
+                    The registration fee for BRHS DECA is $20. This covers your membership for the entire school year and includes access to all competitive events, workshops, and activities.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div className={styles.faqItem}>
+              <button 
+                className={styles.faqQuestion}
+                onClick={() => toggleFAQ(4)}
+              >
+                <span className={styles.questionText}>What are the benefits of joining?</span>
+                <IoIosArrowDown className={`${styles.chevron} ${openFAQ === 4 ? styles.chevronOpen : ''}`} />
+              </button>
+              <div className={`${styles.faqAnswer} ${openFAQ === 4 ? styles.faqAnswerOpen : ''}`}>
+                <div className={styles.answerContent}>
+                  <p>
+                    DECA members develop leadership skills, gain real-world business experience, network with industry professionals, and enhance their college applications.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div className={styles.faqItem}>
+              <button 
+                className={styles.faqQuestion}
+                onClick={() => toggleFAQ(5)}
+              >
+                <span className={styles.questionText}>How do I get involved?</span>
+                <IoIosArrowDown className={`${styles.chevron} ${openFAQ === 5 ? styles.chevronOpen : ''}`} />
+              </button>
+              <div className={`${styles.faqAnswer} ${openFAQ === 5 ? styles.faqAnswerOpen : ''}`}>
+                <div className={styles.answerContent}>
+                  <p>
+                    Attend our meetings, participate in competitive events, run for officer positions, and get involved 
+                    in community service projects. Contact our advisor for more information.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }

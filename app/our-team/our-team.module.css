@@ -1,0 +1,167 @@
+.page {
+  min-height: 100vh;
+}
+
+/* Header Section */
+.header {
+  background: linear-gradient(135deg, #d2243d 0%, #b01e35 100%);
+  color: white;
+  padding: 4rem 0;
+}
+
+.pageTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.pageSubtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Section Styles */
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Event Heads Section */
+.eventHeadsSection {
+  background-color: #f8f9fa;
+}
+
+/* Profile Card Styles */
+.profileCard {
+  text-align: center;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.profileCard:hover {
+  border-color: #d2243d;
+  box-shadow: 0 8px 25px rgba(210, 36, 61, 0.15);
+}
+
+.profileImage {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.placeholderImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d2243d, #0073d3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.initials {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.profileInfo {
+  text-align: center;
+}
+
+.memberName {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #4a4a4a;
+  margin-bottom: 0.5rem;
+}
+
+.memberPosition {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #d2243d;
+  margin-bottom: 1rem;
+  padding: 0.3rem 0.8rem;
+  background-color: rgba(210, 36, 61, 0.1);
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.memberDescription {
+  color: #666;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 3rem 0;
+  }
+  
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+  
+  .pageSubtitle {
+    font-size: 1.1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .profileCard {
+    padding: 1.5rem;
+  }
+  
+  .placeholderImage {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .initials {
+    font-size: 1.5rem;
+  }
+  
+  .memberName {
+    font-size: 1.2rem;
+  }
+  
+  .memberPosition {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+  
+  .profileCard {
+    padding: 1rem;
+  }
+  
+  .placeholderImage {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .initials {
+    font-size: 1.2rem;
+  }
+}

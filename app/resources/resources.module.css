@@ -1,0 +1,156 @@
+.page {
+  min-height: 100vh;
+}
+
+/* Header Section */
+.header {
+  background: linear-gradient(135deg, #0073d3 0%, #005bb5 100%);
+  color: white;
+  padding: 4rem 0;
+}
+
+.pageTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.pageSubtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Coming Soon Section */
+.comingSoonCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 4rem 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.iconContainer {
+  margin-bottom: 2rem;
+}
+
+.icon {
+  font-size: 4rem;
+  display: inline-block;
+}
+
+.comingSoonTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4a4a4a;
+  margin-bottom: 1.5rem;
+}
+
+.comingSoonDescription {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.resourceList {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resourceList li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+  color: #555;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.resourceList li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #d2243d;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.resourceList li:last-child {
+  border-bottom: none;
+}
+
+.comingSoonNote {
+  font-size: 1.1rem;
+  color: #0073d3;
+  font-weight: 500;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: rgba(0, 115, 211, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid #0073d3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 3rem 0;
+  }
+  
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+  
+  .pageSubtitle {
+    font-size: 1.1rem;
+  }
+  
+  .comingSoonCard {
+    padding: 3rem 2rem;
+    margin: 0 1rem;
+  }
+  
+  .comingSoonTitle {
+    font-size: 2rem;
+  }
+  
+  .comingSoonDescription {
+    font-size: 1.1rem;
+  }
+  
+  .resourceList li {
+    font-size: 1rem;
+    padding: 0.6rem 0;
+    padding-left: 1.5rem;
+  }
+  
+  .resourceList li:before {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+  
+  .comingSoonCard {
+    padding: 2rem 1.5rem;
+  }
+  
+  .comingSoonTitle {
+    font-size: 1.8rem;
+  }
+  
+  .icon {
+    font-size: 3rem;
+  }
+}
