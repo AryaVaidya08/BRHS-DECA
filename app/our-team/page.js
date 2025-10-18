@@ -60,7 +60,7 @@ export default function OurTeam() {
     {
       name: "Arya Vaidya",
       position: "Webmaster",
-      description: "Arya is a senior who in DECA for 2 years. He has been coding for 8 years with experience in Python, Java, C++, React, and ML. ",
+      description: "Arya is a senior whose been in DECA for 2 years. He has been coding for 8 years with experience in Python, Java, C++, React, and ML. ",
       image: "/placeholder-profile.jpg"
     },
     {
@@ -111,7 +111,7 @@ export default function OurTeam() {
     {
       name: "Satwika Chakkilam",
       position: "Entrepreneurship",
-      description: "Satwika is a junior who has been in DECA for two years. I love to travel and hope to pursue business in the future.",
+      description: "Satwika is a junior who has been in DECA for two years. She loves to travel and hopes to pursue business in the future.",
       image: "/placeholder-profile.jpg"
     },
     {
@@ -129,7 +129,7 @@ export default function OurTeam() {
     {
       name: "Roma Gupta",
       position: "Written Events",
-      description: "Roma is a sophmore who has been in DECA for 2 years and finalized at SCDC.",
+      description: "Roma is a sophomore who has been in DECA for 2 years and finalized at SCDC.",
       image: "/placeholder-profile.jpg"
     },
     {
