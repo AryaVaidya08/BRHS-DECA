@@ -28,6 +28,7 @@ export default function Header() {
             width={35}
             height={35}
             className={styles.logo}
+            priority
           />
           <Image
             src="/DECA_LOGO.png"
@@ -35,6 +36,7 @@ export default function Header() {
             width={35}
             height={35}
             className={styles.logo}
+            priority
           />
           <div className={styles.brandText}>
             <span className={styles.brandName}>BRHS DECA</span>
