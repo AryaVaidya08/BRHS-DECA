@@ -1,7 +1,8 @@
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 export const metadata = {
   title: {
@@ -112,6 +113,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <GoogleAnalytics />
         <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
           <Header />
           <main style={{ flex: 1 }}>
