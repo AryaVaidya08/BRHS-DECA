@@ -90,7 +90,7 @@ export default function OurTeam() {
     {
       name: "Victoria Wang",
       position: "Social Media Manager",
-      description: "",
+      description: "Victoria is a junior with 2 years of DECA experience, passion for business, media coordination, and community service. Victoria has 4+ years of content/media coordination related work and 150+ volunteer hours by leading community events and hospital volunteering.",
       image: "/placeholder-profile.jpg"
     }
   ];
