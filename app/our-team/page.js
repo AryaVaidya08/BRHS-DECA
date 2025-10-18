@@ -1,12 +1,18 @@
 'use client';
 
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { useEffect } from 'react';
 import styles from './our-team.module.css';
 
 export default function OurTeam() {
   // Scroll animations for sections
   const [boardRef, boardVisible] = useScrollAnimation();
   const [eventHeadsRef, eventHeadsVisible] = useScrollAnimation();
+
+  useEffect(() => {
+    // Set page title
+    document.title = 'BRHS DECA | Team';
+  }, []);
 
   const boardMembers = [
     {

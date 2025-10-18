@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './resources.module.css';
 import resourcesData from './resources-data.json';
 import FilterDropdown from '../components/FilterDropdown';
@@ -18,6 +18,11 @@ import { SiQuizlet } from "react-icons/si";
 export default function Resources() {
   const [selectedCategory, setSelectedCategory] = useState('All Categories');
   const [selectedEventType, setSelectedEventType] = useState('All Event Types');
+  
+  useEffect(() => {
+    // Set page title
+    document.title = 'BRHS DECA | Resources';
+  }, []);
   
   // Get all categories for the dropdown (eventCategory level)
   const categories = ['All Categories', ...Object.keys(resourcesData)];

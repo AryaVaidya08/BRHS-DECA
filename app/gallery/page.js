@@ -8,6 +8,9 @@ export default function Gallery() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    // Set page title
+    document.title = 'BRHS DECA | Gallery';
+    
     // Trigger fade-in animation when component mounts
     const timer = setTimeout(() => {
       setIsVisible(true);
