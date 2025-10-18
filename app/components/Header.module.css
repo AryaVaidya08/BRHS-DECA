@@ -4,18 +4,17 @@
   color: white;
   padding: 0.8rem 0;
   position: fixed;
-  top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80%;
-  max-width: 1200px;
+  width: 100%;
   z-index: 100;
-  border-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
   transition: all 0.3s ease;
 }
 
 .container {
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
@@ -75,7 +74,8 @@
 }
 
 .navLink:active {
-  background-color: #0073d3;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 @media (max-width: 768px) {

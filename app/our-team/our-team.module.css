@@ -2,11 +2,39 @@
   min-height: 100vh;
 }
 
+/* Animation Classes */
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fadeOut {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
 /* Header Section */
 .header {
   background: linear-gradient(135deg, #d2243d 0%, #b01e35 100%);
   color: white;
   padding: 4rem 0;
+}
+
+.boardSection {
+  padding-bottom: 4rem !important;
+  padding-top: 2rem;
+}
+
+/* Board Members Header Section */
+.boardMembersHeader {
+  background: #4a4a4a;
+  color: white;
+  padding: 4rem 0;
+  padding-top: 9rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .pageTitle {
@@ -24,6 +52,14 @@
 
 /* Section Styles */
 .sectionTitle {
+  font-size: 2.5rem;
+  padding-top: 6rem;
+  font-weight: bold;
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+}
+
+.sectionTitleOther {
   font-size: 2.5rem;
   font-weight: bold;
   color: #4a4a4a;
@@ -45,7 +81,6 @@
 /* Profile Card Styles */
 .profileCard {
   text-align: center;
-  padding: 2rem;
   transition: all 0.3s ease;
   border: 2px solid transparent;
 }
@@ -94,7 +129,7 @@
   font-size: 1rem;
   font-weight: 500;
   color: #d2243d;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   padding: 0.3rem 0.8rem;
   background-color: rgba(210, 36, 61, 0.1);
   border-radius: 20px;

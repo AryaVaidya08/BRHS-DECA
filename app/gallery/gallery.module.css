@@ -2,11 +2,27 @@
   min-height: 100vh;
 }
 
+/* Animation Classes */
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fadeOut {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
 /* Header Section */
 .header {
-  background: linear-gradient(135deg, #4a4a4a 0%, #333 100%);
+  background: #4a4a4a;
   color: white;
   padding: 4rem 0;
+  padding-top: 9rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .pageTitle {
@@ -42,7 +58,6 @@
   padding: 0;
   overflow: hidden;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
 }
 
 .galleryCard:hover {
@@ -54,6 +69,38 @@
   position: relative;
   height: 250px;
   overflow: hidden;
+}
+
+.postsSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  padding-bottom: 4rem !important;
+}
+
+.galleryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+/* Image overlay for better text readability */
+.imageContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .placeholderImage {

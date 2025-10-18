@@ -66,6 +66,12 @@
   color: #eee;
 }
 
+.contactRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .contactInfo {
   color: #ccc;
   line-height: 1.6;
@@ -78,6 +84,26 @@
 .contactInfo:hover {
   border-bottom-style: solid;
   color: #eee;
+}
+
+.inlineSocialLink {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.inlineSocialLink:hover {
+  color: #d2243d;
+  background: rgba(210, 36, 61, 0.2);
 }
 
 .socialLinks {
@@ -117,8 +143,7 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
-  transition: all 0.3s ease;
-  margin-top: 1rem;
+  transition: all 0.3s ease;  
 }
 
 .contactButton:hover {
@@ -127,7 +152,6 @@
 }
 
 .bottom {
-  padding-top: 1rem;
   text-align: center;
 }
 
@@ -160,5 +184,15 @@
     display: block;
     text-align: center;
     width: 100%;
+  }
+  
+  .contactRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .inlineSocialLink {
+    align-self: flex-start;
   }
 }

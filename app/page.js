@@ -4,10 +4,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { FaBriefcase, FaGraduationCap, FaHandshake, FaStar, FaTrophy, FaBullseye } from "react-icons/fa";
+import { useScrollAnimation, useCountUp } from "./hooks/useScrollAnimation";
 import styles from "./page.module.css";
 
 export default function Home() {
   const [openFAQ, setOpenFAQ] = useState(null);
+
+  // Scroll animations for each section
+  const [whatIsDecaRef, whatIsDecaVisible] = useScrollAnimation();
+  const [achievementsRef, achievementsVisible] = useScrollAnimation();
+  const [whyJoinRef, whyJoinVisible] = useScrollAnimation();
+  const [eventsRef, eventsVisible] = useScrollAnimation();
+  const [faqRef, faqVisible] = useScrollAnimation();
+
+  // Count-up animations for achievement numbers
+  const [membersRef, membersCount] = useCountUp("90+");
+  const [awardsRef, awardsCount] = useCountUp("50+");
+  const [icdcRef, icdcCount] = useCountUp("4");
 
   const toggleFAQ = (index) => {
     setOpenFAQ(openFAQ === index ? null : index);
@@ -52,7 +66,10 @@ export default function Home() {
       </section>
 
       {/* What is DECA Section */}
-      <section className={`section ${styles.whatIsDecaSection}`}>
+      <section 
+        ref={whatIsDecaRef}
+        className={`section ${styles.whatIsDecaSection} ${whatIsDecaVisible ? styles.fadeIn : styles.fadeOut}`}
+      >
         <div className="container">
           <div className="text-center mb-4">
             <h2 className={styles.sectionTitle}>What is DECA?</h2>
@@ -78,7 +95,10 @@ export default function Home() {
       </section>
 
       {/* Our Achievements Section */}
-      <section className={`section ${styles.achievementsSection}`}>
+      <section 
+        ref={achievementsRef}
+        className={`section ${styles.achievementsSection} ${achievementsVisible ? styles.fadeIn : styles.fadeOut}`}
+      >
         <div className="container">
           <div className="text-center mb-4">
             <h2 className={styles.sectionTitle}>Our Achievements</h2>
@@ -86,15 +106,21 @@ export default function Home() {
           
           <div className={styles.achievementsGrid}>
             <div className={styles.achievementCard}>  
-              <h3 className={styles.achievementTitle}><span className={styles.achievementNumber}>90+</span><br/>Members</h3>
+              <h3 className={styles.achievementTitle}>
+                <span ref={membersRef} className={styles.achievementNumber}>{membersCount}+</span><br/>Members
+              </h3>
             </div>
             
             <div className={styles.achievementCard}>
-              <h3 className={styles.achievementTitle}><span className={styles.achievementNumber}>50+</span><br/>Awards</h3>
+              <h3 className={styles.achievementTitle}>
+                <span ref={awardsRef} className={styles.achievementNumber}>{awardsCount}+</span><br/>Awards
+              </h3>
             </div>
             
             <div className={styles.achievementCard}>
-              <h3 className={styles.achievementTitle}><span className={styles.achievementNumber}>4</span><br/>Students to ICDC</h3>
+              <h3 className={styles.achievementTitle}>
+                <span ref={icdcRef} className={styles.achievementNumber}>{icdcCount}</span><br/>Students to ICDC
+              </h3>
             </div>
           </div>
 
@@ -143,7 +169,10 @@ export default function Home() {
       </section>
 
       {/* Why You Should Join Section */}
-      <section className={`section ${styles.whyJoinSection}`}>
+      <section 
+        ref={whyJoinRef}
+        className={`section ${styles.whyJoinSection} ${whyJoinVisible ? styles.fadeIn : styles.fadeOut}`}
+      >
         <div className="container">
           <div className="text-center mb-4">
             <h2 className={styles.sectionTitle}>Why You Should Join DECA</h2>
@@ -151,8 +180,12 @@ export default function Home() {
           
           <div className={styles.joinBenefits}>
             <div className={styles.benefitCard}>
-              <div className={styles.benefitIcon}>💼</div>
-              <h3 className={styles.benefitTitle}>Career Preparation</h3>
+              <div className={styles.benefitCardHeader}>
+                <div className={styles.benefitIconContainer}>
+                  <FaBriefcase className={styles.benefitIcon} />
+                </div>
+                <h3 className={styles.benefitTitle}>Career Preparation</h3>
+              </div>
               <p className={styles.benefitDescription}>
                 Gain real-world business experience and develop skills that employers value. 
                 DECA members are 2x more likely to be employed in business-related fields.
@@ -160,8 +193,12 @@ export default function Home() {
             </div>
             
             <div className={styles.benefitCard}>
-              <div className={styles.benefitIcon}>🎓</div>
-              <h3 className={styles.benefitTitle}>College Readiness</h3>
+              <div className={styles.benefitCardHeader}>
+                <div className={styles.benefitIconContainer}>
+                  <FaGraduationCap className={styles.benefitIcon} />
+                </div>
+                <h3 className={styles.benefitTitle}>College Readiness</h3>
+              </div>
               <p className={styles.benefitDescription}>
                 Build confidence, communication skills, and leadership abilities that 
                 prepare you for college and beyond.
@@ -169,8 +206,12 @@ export default function Home() {
             </div>
             
             <div className={styles.benefitCard}>
-              <div className={styles.benefitIcon}>🤝</div>
-              <h3 className={styles.benefitTitle}>Networking</h3>
+              <div className={styles.benefitCardHeader}>
+                <div className={styles.benefitIconContainer}>
+                  <FaHandshake className={styles.benefitIcon} />
+                </div>
+                <h3 className={styles.benefitTitle}>Networking</h3>
+              </div>
               <p className={styles.benefitDescription}>
                 Connect with like-minded students, industry professionals, and alumni 
                 who can help guide your career path and open doors to opportunities.
@@ -178,8 +219,12 @@ export default function Home() {
             </div>
             
             <div className={styles.benefitCard}>
-              <div className={styles.benefitIcon}>🌟</div>
-              <h3 className={styles.benefitTitle}>Personal Growth</h3>
+              <div className={styles.benefitCardHeader}>
+                <div className={styles.benefitIconContainer}>
+                  <FaStar className={styles.benefitIcon} />
+                </div>
+                <h3 className={styles.benefitTitle}>Personal Growth</h3>
+              </div>
               <p className={styles.benefitDescription}>
                 Develop confidence, public speaking skills, and problem-solving abilities 
                 through hands-on competitions and leadership opportunities.
@@ -187,8 +232,12 @@ export default function Home() {
             </div>
             
             <div className={styles.benefitCard}>
-              <div className={styles.benefitIcon}>🏆</div>
-              <h3 className={styles.benefitTitle}>Recognition</h3>
+              <div className={styles.benefitCardHeader}>
+                <div className={styles.benefitIconContainer}>
+                  <FaTrophy className={styles.benefitIcon} />
+                </div>
+                <h3 className={styles.benefitTitle}>Recognition</h3>
+              </div>
               <p className={styles.benefitDescription}>
                 Compete at regional, state, and international levels. Earn awards, 
                 accolades, and recognition that enhance your college applications.
@@ -196,8 +245,12 @@ export default function Home() {
             </div>
             
             <div className={styles.benefitCard}>
-              <div className={styles.benefitIcon}>🎯</div>
-              <h3 className={styles.benefitTitle}>Fun & Friendships</h3>
+              <div className={styles.benefitCardHeader}>
+                <div className={styles.benefitIconContainer}>
+                  <FaBullseye className={styles.benefitIcon} />
+                </div>
+                <h3 className={styles.benefitTitle}>Fun & Friendships</h3>
+              </div>
               <p className={styles.benefitDescription}>
                 Join a supportive community of ambitious students. Participate in 
                 exciting events, conferences, and activities while making lifelong friends.
@@ -208,10 +261,13 @@ export default function Home() {
       </section>
 
       {/* Events, Deadlines & Calendar Section */}
-      <section className={`section ${styles.eventsSection}`}>
+      <section 
+        ref={eventsRef}
+        className={`section ${styles.eventsSection} ${eventsVisible ? styles.fadeIn : styles.fadeOut}`}
+      >
         <div className="container">
           <div className="text-center mb-4">
-            <h2 className={styles.sectionTitle}>Events, Deadlines & Calendar</h2>
+            <h2 className={styles.sectionTitle}>Events & Deadlines</h2>
           </div>
           
           <div className={styles.eventsContent}>
@@ -258,11 +314,11 @@ export default function Home() {
               <div className={styles.deadlineList}>
                 <div className={styles.deadlineItem}>
                   <div className={styles.deadlineDate}>November 10th</div>
-                  <div className={styles.deadlineDescription}>Event Registration deadline for Regionals</div>
+                  <div className={styles.deadlineDescription}>Event Registration Deadline For Regionals</div>
                 </div>
                 <div className={styles.deadlineItem}>
                   <div className={styles.deadlineDate}>???</div>
-                  <div className={styles.deadlineDescription}>More Deadlines will be added soon</div>
+                  <div className={styles.deadlineDescription}>More Deadlines Will Be Added Soon</div>
                 </div>
               </div>
             </div>
@@ -271,7 +327,10 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className={`section ${styles.faqSection}`}>
+      <section 
+        ref={faqRef}
+        className={`section ${styles.faqSection} ${faqVisible ? styles.fadeIn : styles.fadeOut}`}
+      >
         <div className="container">
           <div className="text-center mb-4">
             <h2 className={styles.sectionTitle}>Frequently Asked Questions</h2>
