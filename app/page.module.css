@@ -400,15 +400,18 @@
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+  cursor: pointer;
 }
 
 .benefitCard:hover {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
 }
 
 .benefitCardHeader {
@@ -430,11 +433,24 @@
   width: 60px;
   height: 60px;
   flex-shrink: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.benefitCard:hover .benefitIconContainer {
+  background: linear-gradient(135deg, #d2243d 0%, #b01e35 100%);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 4px 15px rgba(210, 36, 61, 0.3);
 }
 
 .benefitIcon {
   font-size: 1.5rem;
   color: #d2243d;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.benefitCard:hover .benefitIcon {
+  color: white;
+  transform: scale(1.1);
 }
 
 .benefitTitle {
@@ -442,6 +458,12 @@
   font-weight: 600;
   color: #4a4a4a;
   text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.benefitCard:hover .benefitTitle {
+  color: #d2243d;
+  transform: translateY(-2px);
 }
 
 .benefitDescription {
@@ -449,6 +471,12 @@
   font-size: 0.9rem;
   line-height: 1.6;
   text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.benefitCard:hover .benefitDescription {
+  color: #4a4a4a;
+  transform: translateY(-1px);
 }
 
 /* Events Section */
@@ -732,6 +760,15 @@
     grid-template-columns: 1fr;
   }
   
+  /* Reduce hover effects on mobile for better performance */
+  .benefitCard:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+  
+  .benefitCard:hover .benefitIconContainer {
+    transform: scale(1.05) rotate(3deg);
+  }
+  
   .eventsContent {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -771,5 +808,44 @@
   .heroButtons .btn {
     width: 100%;
     max-width: 300px;
+  }
+  
+  /* Further reduce hover effects on small screens */
+  .benefitCard:hover {
+    transform: translateY(-2px) scale(1.005);
+  }
+  
+  .benefitCard:hover .benefitIconContainer {
+    transform: scale(1.03) rotate(2deg);
+  }
+}
+
+/* Disable hover effects on touch devices */
+@media (hover: none) {
+  .benefitCard:hover {
+    transform: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: white;
+  }
+  
+  .benefitCard:hover .benefitIconContainer {
+    background-color: #f8f9fa;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .benefitCard:hover .benefitIcon {
+    color: #d2243d;
+    transform: none;
+  }
+  
+  .benefitCard:hover .benefitTitle {
+    color: #4a4a4a;
+    transform: none;
+  }
+  
+  .benefitCard:hover .benefitDescription {
+    color: #666;
+    transform: none;
   }
 }

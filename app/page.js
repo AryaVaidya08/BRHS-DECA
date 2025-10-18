@@ -4,7 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import { FaBriefcase, FaGraduationCap, FaHandshake, FaStar, FaTrophy, FaBullseye } from "react-icons/fa";
+import { FaBriefcase, FaGraduationCap, FaHandshake, FaStar, FaTrophy, FaChartLine } from "react-icons/fa";
+import { IoMdHappy } from "react-icons/io";
 import { useScrollAnimation, useCountUp } from "./hooks/useScrollAnimation";
 import styles from "./page.module.css";
 
@@ -221,7 +222,7 @@ export default function Home() {
             <div className={styles.benefitCard}>
               <div className={styles.benefitCardHeader}>
                 <div className={styles.benefitIconContainer}>
-                  <FaStar className={styles.benefitIcon} />
+                  <FaChartLine className={styles.benefitIcon} />
                 </div>
                 <h3 className={styles.benefitTitle}>Personal Growth</h3>
               </div>
@@ -247,7 +248,7 @@ export default function Home() {
             <div className={styles.benefitCard}>
               <div className={styles.benefitCardHeader}>
                 <div className={styles.benefitIconContainer}>
-                  <FaBullseye className={styles.benefitIcon} />
+                  <IoMdHappy className={styles.benefitIcon} />
                 </div>
                 <h3 className={styles.benefitTitle}>Fun & Friendships</h3>
               </div>
