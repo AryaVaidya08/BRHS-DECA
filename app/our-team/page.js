@@ -66,7 +66,7 @@ export default function OurTeam() {
     {
       name: "Ohmal Suresh",
       position: "Secretary",
-      description: "",
+      description: "Ohmal is a senior in his second year of DECA. He placed top 20 internationally in Principles of Marketing at ICDC, and has a passion for public speaking.",
       image: "/placeholder-profile.jpg"
     },
     {
