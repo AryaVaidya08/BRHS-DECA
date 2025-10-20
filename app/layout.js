@@ -65,6 +65,9 @@ export const metadata = {
   alternates: {
     canonical: 'https://brhs-deca.vercel.app',
   },
+  verification: {
+    google: 'google53ea055d3c01e4ca',
+  },
 };
 
 export default function RootLayout({ children }) {
