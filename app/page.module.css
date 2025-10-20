@@ -175,6 +175,7 @@
 /* What is DECA Section */
 .whatIsDecaSection {
   background-color: #ffffff;
+  padding: 4rem 0;
 }
 
 .whatIsDecaContent {
@@ -183,10 +184,12 @@
   gap: 3rem;
   align-items: start;
   margin: 0 auto;
+  max-width: 1200px;
 }
 
 .decaInfo {
   text-align: center;
+  padding: 0 1rem;
 }
 
 .decaSubtitle {
@@ -194,6 +197,7 @@
   font-weight: 600;
   color: #4a4a4a;
   margin-bottom: 1.5rem;
+  line-height: 1.4;
 }
 
 .decaDescription {
@@ -201,6 +205,9 @@
   line-height: 1.7;
   color: #666;
   margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .decaInfoContainer {
@@ -221,12 +228,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 1rem;
 }
 
 .decaImage {
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
+  width: 100%;
+  height: auto;
+  max-width: 400px;
 }
 
 .decaImage:hover {
@@ -687,6 +698,24 @@
 
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .whatIsDecaContent {
+    gap: 2.5rem;
+  }
+  
+  .decaSubtitle {
+    font-size: 1.4rem;
+  }
+  
+  .decaDescription {
+    font-size: 1.05rem;
+  }
+  
+  .decaImage {
+    max-width: 350px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
     padding: 4rem 0;
@@ -735,10 +764,31 @@
   .whatIsDecaContent {
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding: 0 1rem;
   }
   
   .decaInfo {
     text-align: center;
+    padding: 0;
+  }
+  
+  .decaSubtitle {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .decaDescription {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .decaImageContainer {
+    padding: 0;
+    order: -1;
+  }
+  
+  .decaImage {
+    max-width: 300px;
   }
   
   .decaStats {
@@ -808,6 +858,30 @@
   .heroButtons .btn {
     width: 100%;
     max-width: 300px;
+  }
+  
+  /* What is DECA section improvements for small screens */
+  .whatIsDecaSection {
+    padding: 3rem 0;
+  }
+  
+  .whatIsDecaContent {
+    padding: 0 0.5rem;
+    gap: 1.5rem;
+  }
+  
+  .decaSubtitle {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .decaDescription {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .decaImage {
+    max-width: 250px;
   }
   
   /* Further reduce hover effects on small screens */
