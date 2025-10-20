@@ -26,7 +26,7 @@ export const metadata = {
     "Bridgewater-Raritan",
     "business education"
   ],
-  authors: [{ name: "BRHS DECA" }],
+  authors: [{ name: "BRHS DECA" }, { name: "Arya Vaidya" }],
   creator: "BRHS DECA",
   publisher: "Bridgewater-Raritan High School DECA",
   robots: {
