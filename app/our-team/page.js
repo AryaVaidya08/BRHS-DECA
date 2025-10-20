@@ -36,7 +36,7 @@ export default function OurTeam() {
     {
       name: "Harshith Nemani",
       position: "Vice-President",
-      description: "",
+      description: "Harshith is a senior at BRHS with over two years of involvement in DECA. Beyond the club itself, he contributes to his community and shows leadership by being an Eagle Scout.",
       image: "/placeholder-profile.jpg"
     },
     {
