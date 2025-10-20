@@ -9,7 +9,7 @@ export const metadata = {
     default: "BRHS DECA",
     template: "%s"
   },
-  description: "Join BRHS DECA at Bridgewater-Raritan High School! Empowering future business leaders through competitive events, professional development, and community engagement. 90+ members, 50+ awards, and 4 students advancing to ICDC.",
+  description: "Empowering future business leaders at Bridgewater-Raritan High School. Join 90+ members competing in DECA events, earning 50+ awards, with 4 students advancing to ICDC.",
   keywords: [
     "BRHS DECA",
     "Bridgewater-Raritan High School DECA",
@@ -45,8 +45,8 @@ export const metadata = {
     locale: 'en_US',
     url: 'https://brhs-deca.vercel.app',
     siteName: 'BRHS DECA',
-    title: 'BRHS DECA',
-    description: 'Join BRHS DECA at Bridgewater-Raritan High School! Empowering future business leaders through competitive events, professional development, and community engagement.',
+    title: 'BRHS DECA - Empowering Future Business Leaders',
+    description: 'Join Bridgewater-Raritan High School DECA! 90+ members, 50+ awards, 4 ICDC qualifiers. Competitive business events and professional development.',
     images: [
       {
         url: '/BR_and_DECA_LOGO.png',
@@ -58,8 +58,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BRHS DECA',
-    description: 'Join BRHS DECA at Bridgewater-Raritan High School! Empowering future business leaders through competitive events.',
+    title: 'BRHS DECA - Empowering Future Business Leaders',
+    description: 'Join Bridgewater-Raritan High School DECA! 90+ members, 50+ awards, 4 ICDC qualifiers.',
     images: ['/BR_and_DECA_LOGO.png'],
   },
   alternates: {
@@ -67,6 +67,11 @@ export const metadata = {
   },
   verification: {
     google: 'google53ea055d3c01e4ca',
+  },
+  icons: {
+    icon: '/BR_and_DECA_LOGO.png',
+    shortcut: '/BR_and_DECA_LOGO.png',
+    apple: '/BR_and_DECA_LOGO.png',
   },
 };
 
