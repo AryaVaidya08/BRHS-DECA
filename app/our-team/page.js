@@ -123,7 +123,7 @@ export default function OurTeam() {
     {
       name: "Aarav Gupta",
       position: "Hospitality & Tourism",
-      description: "",
+      description: "Aarav is a junior who has been in DECA for 2 years. He is interested in pursuing finance in college and he has played basketball for 4 years.",
       image: "/placeholder-profile.jpg"
     },
     {
