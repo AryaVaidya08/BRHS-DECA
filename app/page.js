@@ -314,7 +314,7 @@ export default function Home() {
               <h3 className={styles.eventsSubtitle}>Important Deadlines</h3>
               <div className={styles.deadlineList}>
                 <div className={styles.deadlineItem}>
-                  <div className={styles.deadlineDate}>November 10th</div>
+                  <div className={styles.deadlineDate}>October 29th</div>
                   <div className={styles.deadlineDescription}>Event Registration Deadline For Regionals</div>
                 </div>
                 <div className={styles.deadlineItem}>
