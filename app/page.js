@@ -21,7 +21,7 @@ export default function Home() {
 
   // Count-up animations for achievement numbers
   const [membersRef, membersCount] = useCountUp("90+");
-  const [awardsRef, awardsCount] = useCountUp("50+");
+  const [awardsRef, awardsCount] = useCountUp("80+");
   const [icdcRef, icdcCount] = useCountUp("4");
 
   const toggleFAQ = (index) => {
